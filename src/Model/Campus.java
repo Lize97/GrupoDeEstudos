@@ -10,13 +10,19 @@ package Model;
  * @author andre
  */
 public class Campus {
+
     private String nome;
     private Integer id;
-    
-    public Campus(){
-        
+
+    public String toString() {
+        return getNome(); //To change body of generated methods, choose Tools | Templates.
     }
-    public Campus(Integer id){
+
+    public Campus() {
+
+    }
+
+    public Campus(Integer id) {
         this.id = id;
     }
 
@@ -28,7 +34,7 @@ public class Campus {
         this.nome = nome;
     }
 
-    public Integer getId() {    
+    public Integer getId() {
         return id;
     }
 }

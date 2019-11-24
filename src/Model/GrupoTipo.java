@@ -10,8 +10,21 @@ package Model;
  * @author andre
  */
 public class GrupoTipo {
+
     private String nome;
     private Integer id;
+
+    public String toString() {
+        return getNome(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public GrupoTipo(Integer id) {
+        this.id = id;
+    }
+
+    public GrupoTipo(String nome) {
+        this.nome = nome;
+    }
 
     public String getNome() {
         return nome;

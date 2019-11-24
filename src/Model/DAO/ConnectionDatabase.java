@@ -7,10 +7,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ConnectionDatabase {
-private static final String URL = "jdbc:mysql://localhost:3306/grupo_de_estudo?useTimezone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false";
+private static final String URL = "jdbc:mysql://localhost:3306/grupoestudo?useTimezone=true&serverTimezone=UTC&autoReconnect=true&useSSL=false";
       private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
       private static final String USER = "root";
-      private static final String PASS = "1246";
+      private static final String PASS = "Kurama1990";
       
       public  static Connection getConnection(){
           try {

@@ -1,11 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model.DAO;
 
-import static Model.DAO.ConnectionDatabase.getConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -39,7 +33,7 @@ public abstract class GenericDAO<T> {
         }
     }
     
-    abstract public void inserir(T obj);
+    abstract public T inserir(T obj);
     abstract public void editar(T obj);
     abstract public void remover(T obj);
     abstract public T buscarPorId(int id);

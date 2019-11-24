@@ -5,22 +5,40 @@
  */
 package Model;
 
-import java.util.Date;
+import java.sql.Date;
 
-/**
- *
- * @author andre
- */
 public class Aluno {
+
     private String nome;
-    private Integer id;
+    private Long id;
     private Date dataNascimento;
-    
-    public Aluno(){
-        
+    private Curso Curso;
+
+    public String toString() {
+        return getNome(); //To change body of generated methods, choose Tools | Templates.
     }
-    public Aluno(Integer id){
+
+    public Aluno() {
+    }
+
+    public Aluno(Long id) {
         this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Curso getCurso() {
+        return Curso;
+    }
+
+    public void setCurso(Curso Curso) {
+        this.Curso = Curso;
     }
 
     public String getNome() {
@@ -29,10 +47,6 @@ public class Aluno {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Integer getId() {
-        return id;
     }
 
     public Date getDataNascimento() {

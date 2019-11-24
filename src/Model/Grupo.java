@@ -6,6 +6,9 @@
 package Model;
 
 import java.sql.Time;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -13,6 +16,7 @@ import java.util.Date;
  * @author andre
  */
 public class Grupo {
+
     private String nome;
     private Integer id;
     private Integer ano;
@@ -21,16 +25,51 @@ public class Grupo {
     private String atividade;
     private String local;
     private Integer diaSemana;
-    private Time horaIninicio;
+    private Time horaInicio;
     private Time horaFim;
     private Date dataInicio;
     private Integer qtdMinPar;
     private Integer qtdMaxPar;
     private Integer qtdEncontro;
     private Boolean ativo;
+    private GrupoTipo GrupoTipo;
+    private Aluno Aluno;
+    private Campus Campus;
+
+    public Campus getCampus() {
+        return Campus;
+    }
+
+    public void setCampus(Campus Campus) {
+        this.Campus = Campus;
+    }
+
+    public Aluno getAluno() {
+        return Aluno;
+    }
+
+    public void setAluno(Aluno Aluno) {
+        this.Aluno = Aluno;
+    }
+
+    public GrupoTipo getGrupoTipo() {
+        return GrupoTipo;
+    }
+
+    public void setGrupoTipo(GrupoTipo GrupoTipo) {
+        this.GrupoTipo = GrupoTipo;
+    }
+
+    public Grupo() {
+
+    }
 
     public String getNome() {
         return nome;
+    }
+
+    public Grupo(Integer id) {
+        this.id = id;
     }
 
     public void setNome(String nome) {
@@ -93,12 +132,12 @@ public class Grupo {
         this.diaSemana = diaSemana;
     }
 
-    public Time getHoraIninicio() {
-        return horaIninicio;
+    public Time getHoraInicio() {
+        return horaInicio;
     }
 
-    public void setHoraIninicio(Time horaIninicio) {
-        this.horaIninicio = horaIninicio;
+    public void setHoraInicio(Time horaIninicio) {
+        this.horaInicio = horaIninicio;
     }
 
     public Time getHoraFim() {
@@ -148,5 +187,5 @@ public class Grupo {
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
     }
-    
+
 }

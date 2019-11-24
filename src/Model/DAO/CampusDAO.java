@@ -38,7 +38,7 @@ public class CampusDAO extends GenericDAO<Campus> {
     }
 
     @Override
-    public void inserir(Campus obj) {
+    public Campus inserir(Campus obj) {
         String sql = "INSERT INTO campus (nome, email, data_nascimento, sexo, aceita_msg, observacoes, curso_id) VALUES (?,?,?,?,?,?,?)";
         try {
             PreparedStatement pstmt = getConnection().prepareStatement(sql);//CRIANDO UMA CONEXÃO E UMA CONSULTA PREPARADA
@@ -50,7 +50,7 @@ public class CampusDAO extends GenericDAO<Campus> {
             System.err.print("ERRO AO INSERIR");
 
         }
-
+return obj;
     }
 
     @Override
